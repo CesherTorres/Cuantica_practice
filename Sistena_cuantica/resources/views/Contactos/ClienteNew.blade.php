@@ -12,16 +12,11 @@
             <div class="form row">
                 <div class="col-md-12 col-sm-12">
                     <div class="card card-success card-outline">
-                        <div class="card-header">
-                            <h3 class="card-title">NUevo Contacto</h3>
-                        </div>
                         <div class="card-body">    
-                        <div class="pt-5">
+                        
         <div class="container border" style="background: url('/ImageDecorativa/fondo_cabecera.jpg') top left no-repeat;">
-            <br>
-            <img style="height: 40px; width: 40px; background-color: #EFEFEF;" class="card-img-top rounded-circle mx-auto d-block" src="" alt="">
-            <br>
-            <h1 class="text-center">NUEVO CLIENTE</h1>
+            
+            <h1 class="text-center">NUEVO CONTACTO</h1>
             <br>
         </div>
         <form>
