@@ -24,7 +24,7 @@
                             <!--<h1 class="text-center">NUEVO CLIENTE</h1>
                             <br>-->
                         </div>
-                        <form method="post" action="/cliente">
+                        <form method="post" action="/cliente/crear">
                         @csrf
                             <div class="container border border-top-0 border-primary shadow">
                                 <div align="center">
