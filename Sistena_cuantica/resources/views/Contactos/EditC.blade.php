@@ -1,32 +1,17 @@
-@extends('plantilla.principal')
-
-@section('title', 'Contacto - Nuevo')
-
-@section('content')
 <div class="container">
-<div class="content-header">
-    <div class="container-fluid">
-     
-        <!-- Main content -->
-<section class="content">
-    <div class="form row">
-        <div class="col-md-12 col-sm-12">
-            <div class="card card-success card-outline">
-                <div class="card-header">
-                    <h3 class="card-title">Nuevo Contacto</h3>
+    <div class="modal fade" id="editCliente{{$cliente->id}}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                Nuevo Cliente
+                <button class="close" data-dismiss='modal'>&times;</button>
                 </div>
-                <div class="card-body">    
-                    <div class="pt-5">
-                        <div class="container border" style="background: url('/ImageDecorativa/fondo_cabecera.jpg') top left no-repeat;">
-                            <br>
-                            <img style="height: 80px; width: 80px; background-color: #EFEFEF;" class="card-img-top rounded-circle mx-auto d-block" src="" alt="">
-                            <br>
-                            <!--<h1 class="text-center">NUEVO CLIENTE</h1>
-                            <br>-->
-                        </div>
-                        <form method="post" action="/cliente">
+                <div class="modal-body">
+                    <form class="form-group" method="POST" action="/cliente/{{$cliente->id}}">
+                        @method('PUT')
                         @csrf
-                            <div class="container border border-top-0 border-primary shadow">
+
+                        <div class="container border border-top-0 border-primary shadow">
                                 <div align="center">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -50,14 +35,14 @@
                                     <div class="col-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Número (RUC, DNI, Etc.)</label>
-                                            <input type="text" name="NumeroD" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" name="NumeroD" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->Ndato}}">
                                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Tipo de identificación</label>
-                                        <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
+                                        <select type="text" name="TipoI" class="form-select" aria-label="Default select example" value="{{$cliente->TipoIdentificacion}}">
                                             <option selected></option>
                                             <option value="1">RUC - Registro Unico de Contribuyente</option>
                                             <option value="2">DNI - Documento Nacional de Identidad</option>
@@ -71,7 +56,7 @@
                                     <div class="col">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Razón social o nombre completo </label>
-                                        <input type="text" name="razonS" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="text" name="razonS" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->Rsocial}}">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     </div>
@@ -80,7 +65,7 @@
                                     <div class="col">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Dirección completa</label>
-                                        <input type="text" name="direccionC" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="text" name="direccionC" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->DireccionC}}">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     </div>
@@ -90,14 +75,14 @@
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                                <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->correo}}">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Celular</label>
-                                                <input type="text" name="celular" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" name="celular" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->celular}}">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
@@ -106,35 +91,28 @@
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Teléfono 1</label>
-                                                <input type="text" name="Telefono1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" name="Telefono1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->telefono1}}">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Teléfono 2</label>
-                                                <input type="text" name="Telefono2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" name="Telefono2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$cliente->telefono2}}">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div align="center">
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                    <button type="submit" class="btn btn-primary">Editar</button>
                                 </div>
                                 <br>
                             </div>
-                            @include('/Contactos/ModalC')
-                        </form>  
-                    </div>
-                </div>
-            </div><!-- /.card-body -->
-        </div><!-- /.card --> 
-    </div>                     
-</section><!-- /.content -->
-        </div><!-- /.container-fluid -->
-    </div><!-- /.content-header --> 
-</div>
 
-    
-@endsection
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

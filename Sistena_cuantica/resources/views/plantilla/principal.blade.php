@@ -36,9 +36,9 @@
         </div>
         <ul class="sub-menu">
             <li><a class="link_name" href="#">Contactos</a></li>
-            <li><a href="#">Nuevo contacto</a></li>
-            <li><a href="#">Clientes</a></li>
-            <li><a href="#">Proveedores</a></li>
+            <li><a href="/cliente">Lista de Contactos</a></li>
+            <li><a href="/cliente">Clientes</a></li>
+            <li><a href="/Proveedor">Proveedores</a></li>
         </ul>
       </li>
       <li>

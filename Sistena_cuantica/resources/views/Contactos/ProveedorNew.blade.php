@@ -24,8 +24,7 @@
                             <!--<h1 class="text-center">NUEVO CLIENTE</h1>
                             <br>-->
                         </div>
-                        <form method="post" action="/cliente">
-                        @csrf
+                        <form>
                             <div class="container border border-top-0 border-primary shadow">
                                 <div align="center">
                                     <div class="form-check form-check-inline">
@@ -50,14 +49,14 @@
                                     <div class="col-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Número (RUC, DNI, Etc.)</label>
-                                            <input type="text" name="NumeroD" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Tipo de identificación</label>
-                                        <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
+                                        <select class="form-select" aria-label="Default select example">
                                             <option selected></option>
                                             <option value="1">RUC - Registro Unico de Contribuyente</option>
                                             <option value="2">DNI - Documento Nacional de Identidad</option>
@@ -71,7 +70,7 @@
                                     <div class="col">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Razón social o nombre completo </label>
-                                        <input type="text" name="razonS" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     </div>
@@ -80,7 +79,7 @@
                                     <div class="col">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Dirección completa</label>
-                                        <input type="text" name="direccionC" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     </div>
@@ -90,14 +89,14 @@
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                                <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Celular</label>
-                                                <input type="text" name="celular" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
@@ -106,14 +105,14 @@
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Teléfono 1</label>
-                                                <input type="text" name="Telefono1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Teléfono 2</label>
-                                                <input type="text" name="Telefono2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                         </div>

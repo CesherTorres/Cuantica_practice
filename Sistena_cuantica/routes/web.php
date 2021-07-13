@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('plantilla.principal');
 });
 
-route::resource('/cliente/crear','ClienteController');
+route::resource('/cliente','ClienteController');
+route::resource('/Proveedor','ProveedorController');

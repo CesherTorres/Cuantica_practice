@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Cliente;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class ProveedorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes= Cliente::all();
-        return view('Contactos.IndexC', compact('clientes'));
+        return view('Contactos.ProveedorNew');
     }
 
     /**
@@ -25,7 +23,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('Contactos.ClienteNew');
+        //
     }
 
     /**
@@ -36,18 +34,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = new Cliente ();
-        $cliente->Ndato = $request->input('NumeroD');
-        $cliente->TipoIdentificacion = $request->input('TipoI');
-        $cliente->Rsocial = $request->input('razonS');
-        $cliente->DireccionC = $request->input('direccionC');
-        $cliente->correo = $request->input('correo');
-        $cliente->celular = $request->input('celular');
-        $cliente->telefono1 = $request->input('Telefono1');
-        $cliente->telefono2 = $request->input('Telefono2');
-        $cliente->save();
-
-        return redirect()->route('cliente.index');
+        //
     }
 
     /**
@@ -69,9 +56,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        $cliente = Cliente::find($id);
-        //$trainers = Trainer::firstOrFail();
-        return view('Contactos.EditC', compact('cliente'));
+        //
     }
 
     /**
@@ -83,11 +68,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cliente = Cliente::find($id);
-        $cliente->fill($request->all());
-     
-        $cliente->save();
-        return redirect('/clienteI');
+        //
     }
 
     /**
