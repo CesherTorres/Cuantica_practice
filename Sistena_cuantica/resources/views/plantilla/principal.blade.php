@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi empresa - @yield('title')</title>
-    <link rel="stylesheet" href="css/plantilla.css">
+    <link rel="stylesheet" href="/css/plantilla.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap-5.0 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/css/bootstrap.min.css" rel="stylesheet" >
    </head>
 <body>
   <div class="sidebar">
@@ -46,7 +46,7 @@
       <li>
         <div class="profile-details">
             <div class="profile-content">
-                <img src="img/avatar.jpg" alt="profile">
+                <img src="/img/avatar.jpg" alt="profile">
             </div>
             <div class="name-job">
                 <div class="profile_name">Usuario</div>
@@ -62,8 +62,7 @@
       <i class='bx bx-menu' ></i>
      
     </div>
-    <div class="container">
-        <p>aqui va el contenido</p>
+    <div class="content-wrapper">
         @yield('content')
     </div>
   </section>
@@ -85,6 +84,6 @@
     sidebar.classList.toggle("close");
   });
   </script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
