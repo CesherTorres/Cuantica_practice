@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi empresa - @yield('title')</title>
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="/css/plantilla.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap-5.0 -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
    </head>
 <body>
   <div class="sidebar">
@@ -37,7 +38,7 @@
         <ul class="sub-menu">
             <li><a class="link_name" href="#">Contactos</a></li>
             <li><a href="/cliente">Lista de Contactos</a></li>
-            <li><a href="/cliente">Clientes</a></li>
+            <li><a href="/cliente/create">Clientes</a></li>
             <li><a href="/Proveedor">Proveedores</a></li>
         </ul>
       </li>
@@ -85,5 +86,9 @@
   });
   </script>
   <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="{{asset('js/app.js')}}"></script>
+
+  
 </body>
 </html>

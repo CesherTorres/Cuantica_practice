@@ -6,7 +6,7 @@
 <div class="container">
 <div class="content-header">
     <div class="container-fluid">
-     
+
         <!-- Main content -->
 <section class="content">
     <div class="form row">
@@ -15,7 +15,7 @@
                 <div class="card-header">
                     <h3 class="card-title">Nuevo Contacto</h3>
                 </div>
-                <div class="card-body">    
+                <div class="card-body">
                     <div class="pt-5">
                         <div class="container border" style="background: url('/ImageDecorativa/fondo_cabecera.jpg') top left no-repeat;">
                             <br>
@@ -24,7 +24,7 @@
                             <!--<h1 class="text-center">NUEVO CLIENTE</h1>
                             <br>-->
                         </div>
-                        <form method="post" action="/cliente/crear">
+                        <form method="post" action="/cliente">
                         @csrf
                             <div class="container border border-top-0 border-primary shadow">
                                 <div align="center">
@@ -46,6 +46,7 @@
                                         <i class="fas fa-arrow-up"></i>
                                     </button>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="mb-3">
@@ -55,27 +56,30 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Tipo de identificación</label>
-                                        <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
-                                            <option selected></option>
-                                            <option value="1">RUC - Registro Unico de Contribuyente</option>
-                                            <option value="2">DNI - Documento Nacional de Identidad</option>
-                                            <option value="3">CE - Carnet de Extranjeria</option>
-                                        </select>
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Tipo de identificación</label>
+                                            <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
+                                                <option selected></option>
+                                                <!--vue es un objeto y con el . damos a entender que experience(exp) es una propiedad de ese objeto-->
+                                                <option value="1">RUC - Registro Unico de Contribuyente</option>
+                                                <option value="2">DNI - Documento Nacional de Identidad</option>
+                                                <option value="3">CE - Carnet de Extranjeria</option>
+                                            </select>
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
                                     </div>
-                                    </div> 
                                 </div>
+
                                 <div class="row">
                                     <div class="col">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Razón social o nombre completo </label>
-                                        <input type="text" name="razonS" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Razón social o nombre completo </label>
+                                            <input type="text" name="razonS" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col">
                                     <div class="mb-3">
@@ -125,16 +129,17 @@
                                 <br>
                             </div>
                             @include('/Contactos/ModalC')
-                        </form>  
+                        </form>
                     </div>
                 </div>
             </div><!-- /.card-body -->
-        </div><!-- /.card --> 
-    </div>                     
+        </div><!-- /.card -->
+    </div>
 </section><!-- /.content -->
         </div><!-- /.container-fluid -->
-    </div><!-- /.content-header --> 
+    </div><!-- /.content-header -->
 </div>
+<script>
 
-    
+</script>
 @endsection
