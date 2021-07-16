@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 route::resource('/cliente','ClienteController');
 route::resource('/Proveedor','ProveedorController');
+route::resource('/marca','MarcaController');

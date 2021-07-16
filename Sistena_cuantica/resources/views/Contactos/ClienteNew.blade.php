@@ -46,7 +46,6 @@
                                         <i class="fas fa-arrow-up"></i>
                                     </button>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="mb-3">
@@ -58,12 +57,14 @@
                                     <div class="col-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Tipo de identificación</label>
-                                            <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
-                                                <option selected></option>
+                                            <select id="select" onChange="mostrar(this.value)" type="text" name="TipoI" class="form-select" aria-label="Default select example">
+                                                <option value="1"></option>
                                                 <!--vue es un objeto y con el . damos a entender que experience(exp) es una propiedad de ese objeto-->
-                                                <option value="1">RUC - Registro Unico de Contribuyente</option>
-                                                <option value="2">DNI - Documento Nacional de Identidad</option>
-                                                <option value="3">CE - Carnet de Extranjeria</option>
+                                                <option value="2">RUC - Registro Unico de Contribuyente</option>
+                                                <option value="3">DNI - Documento Nacional de Identidad</option>
+                                                <option value="4">CE - Carnet de Extranjeria</option>
+                                                <option value="5">PP - Pasaporte</option>
+                                                <option value="6">CDI - Cedula Diplomatica de Identidad</option>
                                             </select>
                                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                         </div>
@@ -79,12 +80,59 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row" id="mostrarDD" style="display: none;">
+                                    <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Dirección Fiscal</label>
+                                        <input type="text" name="direccionF" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    </div>
 
-                                <div class="row">
+                                    <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Distrito/provincia/Departamento</label>
+                                        <input type="text" name="distritoP" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Urbanizacion</label>
+                                        <input type="text" name="Urbanizacion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Ubigeo INEI</label>
+                                            <select type="text" name="TipoI" class="form-select" aria-label="Default select example">
+                                                <option value="1"></option>
+                                                <!--vue es un objeto y con el . damos a entender que experience(exp) es una propiedad de ese objeto-->
+                                                <option value="2">001</option>
+                                                <option value="3">002</option>
+                                                <option value="4">003</option>
+                                            </select>
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="OcultarD">
                                     <div class="col">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Dirección completa</label>
                                         <input type="text" name="direccionC" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="OcultarP" style="display: none;">
+                                    <div class="col">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Pais</label>
+                                        <input type="text" name="PaisCP" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     </div>
@@ -139,7 +187,43 @@
         </div><!-- /.container-fluid -->
     </div><!-- /.content-header -->
 </div>
+{{-- <script>
+$(document).ready(function(){ 
+   $('#alternar-respuesta-ej2').on('click',function(){
+      $('#respuesta-ej2').toggle('slow');
+   });
+});
+</script> --}}
+{{-- <script>
+    function toggle() {
+        var cont = document.getElementById('cont');
+        
+        if ((cont.style.display == 'block')) {
+            cont.style.display = 'none';
+        }
+        else {
+            cont.style.display = 'block';
+        }
+    }
+</script> --}}
 <script>
-
+    function mostrar(id) {
+    if (id == "1") {
+        $("#mostrarDD").hide();
+        $("#OcultarD").show();
+        $("#OcultarP").hide();
+    }
+    if (id == "2") {
+        $("#mostrarDD").show();
+        $("#OcultarD").hide();
+    }
+    if (id == "4") {
+        $("#OcultarD").show();
+        $("#OcultarP").show();
+    }
+    
+    }
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script> --}}
 @endsection

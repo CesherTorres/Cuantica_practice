@@ -6,6 +6,7 @@
     <title>Mi empresa - @yield('title')</title>
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="/css/plantilla.css">
+    <link rel="stylesheet" href="/css/stylo_imge.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap-5.0 -->
@@ -67,7 +68,13 @@
         @yield('content')
     </div>
   </section>
-
+<script>
+$(document).ready(function(){ 
+   $('#alternar-respuesta-ej2').on('click',function(){
+      $('#respuesta-ej2').toggle('slow');
+   });
+});
+</script>
   <script>
 
   let arrow = document.querySelectorAll(".arrow");
@@ -89,6 +96,5 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="{{asset('js/app.js')}}"></script>
 
-  
 </body>
 </html>
